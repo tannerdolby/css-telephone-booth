@@ -1,0 +1,777 @@
+*, 
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #C10303;
+  --RED: #A90200;
+  --new-red: #B90200;
+  --orange: #D35400;
+  --height: 75;
+  --width: 40;
+  --top-box-height: 5;
+  --top-box-width: 37;
+  --top-circle-height: 8;
+  --top-circle-width: 37;
+  --floor-box-height: 4;
+  --floor-box-width: 48;
+  --box-one-height: 72;
+  --box-one-width: 35;
+  --box-two-height: 68;
+  --box-two-width: 30;
+  --door-knob-height: 4.5;
+  --door-knob-width: 2.5;
+  --phone-box-height: 19;
+  --phone-box-width: 12;
+  --phone-config-width: 5.5;
+  --phone-config-height: 3;
+  --keypad-height: 1;
+  --keypad-width: 1;
+  --gray-center-bar-height: 1.4;
+  --phone-height: 3;
+  --phone-width: 14;
+  --phone-cable-width: 10;
+  --phone-cable-height: 1.6;
+}
+
+body {
+  min-height: 100vh;
+  background: #1F618D;
+}
+
+.container {
+  width: calc(var(--width) * 1vmin);
+  height: calc(var(--height) * 1vmin);
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.container,
+.top,
+.top-circle,
+.top-circle-line,
+.top-circle-line-two,
+.top-circle-line-three,
+.top-circle-line-four,
+.bottom-square-line,
+.bottom-square-line-two,
+.floor-square-line,
+.floor-square-line-two,
+.side-line,
+.side-line-two,
+.telephone-text,
+.gray-center-bar,
+.booth,
+.floor-box,
+.box-one,
+.box-two,
+.box-three,
+.light-box,
+.light-box-copy,
+.box-four,
+.door-handle,
+.phone-box,
+.phone-config,
+.phone,
+.phone-cable,
+.phone-connect,
+.phone-detail,
+.red-bar,
+.red-bar-two,
+.red-bar-hz,
+.red-bar-hz-two,
+.red-bar-hz-three,
+.red-bar-hz-four,
+.red-bar-hz-five,
+.side-line,
+.side-line-two,
+.side-line-three,
+.keypad-one,
+.keypad-two,
+.keypad-three,
+.keypad-four, 
+.keypad-five,
+.keypad-six,
+.keypad-seven,
+.keypad-eight,
+.keypad-nine,
+.keypad-ten,
+.keypad-eleven,
+.keypad-twelve {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.booth {
+  width: calc(var(--width) * 1vmin);
+  height: calc(var(--height) * 1vmin);
+/*   background: var(--red); */
+  background: linear-gradient(-55deg, var(--RED) 50%, var(--red) 30%);
+  transform: translate(-50%, -46%);
+  border-radius: 10px 10px 0 0;
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+  z-index: 1;
+}
+
+.floor-box {
+  background: linear-gradient(-10deg, #CCC 60%, #DDD 50%);
+  height: calc(var(--floor-box-height) *  1vmin);
+  width: calc(var(--floor-box-width) * 1vmin);
+  position: fixed;
+  transform: translate(-50%, 1000%);
+  border: 2px solid #000;
+  border-radius: 3px;
+  z-index: 999;
+}
+
+.box-one {
+  width: calc(var(--box-one-width) * 1vmin);
+  height: calc(var(--box-one-height) * 1vmin);
+  transform: translate(-50%, -44%);
+  background: transparent;
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  z-index: 99;
+}
+
+.box-two {
+  width: calc(var(--box-two-width) * 1vmin);
+  height: calc(var(--box-two-height) * 1vmin);
+  background: transparent;
+  transform: translate(-50%, -43%);
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+  border-bottom: 4px solid #000;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+.box-three {
+  width: calc(var(--box-two-width) / 1.4 * 1vmin);
+  height: calc(var(--box-two-height) / 1.4 * 1vmin);
+/*   background: hsl(0, 0%, 13%); */
+  background: hsl(0, 0%, 12%);
+/*   background: linear-gradient(to bottom, #FEF9E7 50%, #333 50%); */
+  transform: translate(-50%, -54%);
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+  border-bottom: 4px solid #000;
+  border-radius: 10px;
+  z-index: 99;
+}
+
+.light-box {
+  width: calc(var(--box-two-width) / 1.5 * 1vmin);
+  height: calc(var(--box-two-height) / 1.43 * 1vmin);
+  transform: translate(-50%, -54%);
+  border-radius: 6px;
+/*   background: #FEF9E7; */
+  background: linear-gradient(-65deg, #F9E79F 89%, #000 50%);
+  opacity: 0.08;
+  z-index: 100;
+}
+
+.light-box-copy {
+  width: calc(var(--box-two-width) / 1.5 * 1vmin);
+  height: calc(var(--box-two-height) / 1.43 * 1vmin);
+  transform: translate(-50%, -54%);
+  border-radius: 6px;
+/*   background: #FEF9E7; */
+  background: linear-gradient(64deg, #F9E79F 88%, #000 50%);
+  opacity: 0.08;
+  z-index: 100;
+}
+
+.box-four {
+  width: calc(var(--box-two-width) / 1.4 * 1vmin);
+  height: calc(var(--box-two-height) / 6.5 * 1vmin);
+  transform: translate(-50%, 245%);
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+  border-bottom: 4px solid #000;
+  border-radius: 5px;
+  z-index: 99;
+}
+
+.door-handle {
+  width: calc(var(--door-knob-width) * 1vmin);
+  height: calc(var(--door-knob-height) * 1vmin);
+  transform: translate(449%, -50%);
+  background: orange;
+  border: 3px solid #000;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.phone-box {
+  height: calc(var(--phone-box-height) * 1vmin);
+  width: calc(var(--phone-box-width) * 1vmin);
+  background: gray;
+  border: 4px solid #000;
+  border-left: none;
+  z-index: 99;
+  transform: translate(-84.5%, -120%);
+}
+
+.phone-detail {
+  height: calc(var(--phone-config-height) / 6 * 1vmin);
+  width: calc(var(--phone-config-width) / 1.5 * 1vmin);
+  z-index: 99;
+  background: #222;
+  border-radius: 2px;
+  top: 24.5%;
+  left: 41.5%;
+}
+
+.top {
+  height: calc(var(--top-box-height) * 1vmin);
+  width: calc(var(--top-box-width) * 1vmin);
+  background: linear-gradient(to right, 
+    var(--red) 1%, #D35400 7.5%, 
+    #D35400 93%, var(--red) 99.5%);
+  top: 1%;
+  border: 4px solid #000;
+  border-bottom: 1px solid #000;
+  z-index: 99;
+}
+
+.top-circle-line {
+  height: calc(var(--top-box-height) / 10 * 1vmin);
+  width: calc(var(--top-box-width) / 1.28 * 1vmin);
+  background: hsl(0, 0%, 5%);
+  border-radius: 1px;
+  z-index: 100;
+  transform: translate(-39%, -50%);
+  top: -5%;
+}
+
+.top-circle-line-two {
+  height: calc(var(--top-box-height) / 10 * 1vmin);
+  width: calc(var(--top-box-width) / 9.25 * 1vmin);
+  top: -5%;
+  left: 10%;
+  background: hsl(0, 0%, 5%);
+  border-radius: 1px;
+  z-index: 100;
+}
+
+.top-circle-line-three {
+  height: calc(var(--top-box-height) / 10 * 1vmin);
+  width: calc(var(--top-box-width) / 30.25 * 1vmin);
+  top: -3.6%;
+  left: 7.3%;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  background: hsl(0, 0%, 5%);
+  z-index: 100;
+}
+
+.top-circle-line-four {
+  height: calc(var(--top-box-height) / 11.5 * 1vmin);
+  width: calc(var(--top-box-width) / 30.25 * 1vmin);
+  top: -3.5%;
+  left: 9.5%;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  background: hsl(0, 0%, 5%);
+  z-index: 100;
+}
+
+.bottom-square-line {
+  height: calc(var(--top-box-height) / 8.5 * 1vmin);
+  width: calc(var(--top-box-width) / 19.25 * 1vmin);
+  top: 93%;
+  left: 27%;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  background: hsl(0, 0%, 5%);
+  z-index: 100;
+}
+
+.bottom-square-line-two {
+  height: calc(var(--top-box-height) / 8.5 * 1vmin);
+  width: calc(var(--top-box-width) / 19.25 * 1vmin);
+  top: 93.3%;
+  left: 30.5%;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  background: hsl(0, 0%, 5%);
+  z-index: 100;
+}
+
+.top-circle {
+  height: calc(var(--top-circle-height) * 1vmin);
+  width: calc(var(--top-circle-width) * 1vmin);
+/*   background: var(--red); */
+  background: linear-gradient(-30deg, var(--RED) 55px, var(--red) 10px);
+  z-index: 99;
+  border: 4px solid #000;
+  border-bottom: 0;
+  border-top-left-radius: 65px;
+  border-top-right-radius: 65px;
+  top: -7.5%;
+}
+
+.telephone-text {
+  height: calc(var(--top-box-height) / 1.4 * 1vmin);
+  width: calc(var(--top-box-width) / 1.2 * 1vmin);
+  transform: translate(-50%, -1070.5%);
+  z-index: 99;
+  filter: brightness(105%);
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+  font-family: Helvetica, sans-serif;
+  justify-content: center;
+  text-transform: uppercase;
+  background: hsl(48, 89%, 90%);
+  border: 1.3px solid #000;
+  letter-spacing: 0.1em;
+}
+
+.phone-config {
+  height: calc(var(--phone-config-height) * 1vmin);
+  width: calc(var(--phone-config-width) * 1vmin);
+  background: transparent;
+  border: 1.5px solid #000;
+  border-radius: 3px;
+  top: 25%;
+  left: 42%;
+  z-index: 99;
+}
+
+.keypad-one {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 29%;
+  left: 37.4%;
+}
+
+.keypad-two {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 29%;
+  left: 42.3%;
+}
+
+.keypad-three {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 29%;
+  left: 47%;
+}
+
+.keypad-four {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 31.5%;
+  left: 37.4%;
+}
+
+.keypad-five {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 31.5%;
+  left: 42.3%;
+}
+
+.keypad-six {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 31.5%;
+  left: 47%;
+}
+
+.keypad-seven {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 34%;
+  left: 37.4%;
+}
+
+.keypad-eight {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 34%;
+  left: 42.3%;
+}
+
+.keypad-nine {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 34%;
+  left: 47%;
+}
+
+.keypad-ten {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 36.3%;
+  left: 37.4%;
+}
+
+.keypad-eleven {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 36.3%;
+  left: 42.3%;
+}
+
+.keypad-twelve {
+  height: calc(var(--keypad-height) * 1vmin);
+  width: calc(var(--keypad-width) * 1vmin);
+  border: 1px solid #000;
+  background: transparent;
+  z-index: 99;
+  border-radius: 50%;
+  top: 36.3%;
+  left: 47%;
+}
+
+.gray-center-bar {
+  height: calc(var(--gray-center-bar-height) * 1vmin);
+  width: calc(var(--box-two-width) / 1.48 * 1vmin);
+  background: gray;
+  border: 1px solid black;
+  top: 52%;
+  z-index: 99;
+}
+
+.phone {
+  height: calc(var(--phone-height) * 1vmin);
+  width: calc(var(--phone-width) * 1vmin);
+  background : #000;
+  border: 4px solid #000;
+  border-bottom: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  z-index: 99;
+  transform: rotate(90deg);
+  left: 10.5%;
+  top: 30%;
+}
+
+.phone-cable {
+  width: calc(var(--phone-cable-width) / 1.35 * 1vmin); 
+  height: calc(var(--phone-cable-height) * 1vmin);
+  border: 2.5px solid gray;
+  border-color: gray transparent transparent transparent;
+  border-radius: 60% / 10px 10px 0 0;
+  z-index: 99;
+  top: 48%;
+  left: 16.9%;
+  transform: rotate(90deg);
+  box-shadow: 0px 0px 0px 1.5px #000;
+}
+
+.phone-connect {
+  height: calc(var(--gray-center-bar-height) / 1.6 * 1vmin);
+  width: calc(var(--box-two-width) / 13 * 1vmin);
+  background: gray;
+  border: 1px solid #000;
+  border-radius: 1px;
+  z-index: 99;
+  transform: rotate(90deg);
+  top: 42%;
+  left: 22.5%;
+}
+
+.red-bar {
+  width: calc(var(--box-two-width) / 23 * 1vmin);
+  height: calc(var(--box-two-height) / 1.43 * 1vmin);
+  z-index: 99;
+  background: var(--red);
+  border: 1.5px solid black;
+  top: 47.5%;
+  left: 41%;
+}
+
+.red-bar-two {
+  width: calc(var(--box-two-width) / 24 * 1vmin);
+  height: calc(var(--box-two-height) / 1.43 * 1vmin);
+  z-index: 99;
+  background: var(--red);
+  border: 1.5px solid black;
+  top: 47.5%;
+  left: 60%;
+}
+
+.red-bar-hz {
+  width: calc(var(--box-two-width) / 24 * 1vmin);
+  height: calc(var(--box-two-height) / 3.2 * 1vmin);
+  z-index: 99;
+  background: var(--red);
+  border: 1.5px solid black;
+  top: 55%;
+  left: 48.5%;
+  transform: rotate(90deg);
+}
+
+.red-bar-hz-two {
+  width: calc(var(--box-two-width) / 24 * 1vmin);
+  height: calc(var(--box-two-height) / 3.2 * 1vmin);
+  z-index: 99;
+  background: var(--red);
+  border: 1.5px solid black;
+  top: 43%;
+  left: 48.5%;
+  transform: rotate(90deg);
+}
+
+.red-bar-hz-three {
+  width: calc(var(--box-two-width) / 24 * 1vmin);
+  height: calc(var(--box-two-height) / 3.2 * 1vmin);
+  z-index: 99;
+  background: var(--red);
+  border: 1.5px solid black;
+  top: 30%;
+  left: 48.5%;
+  transform: rotate(90deg);
+}
+
+.red-bar-hz-four {
+  width: calc(var(--box-two-width) / 24 * 1vmin);
+  height: calc(var(--box-two-height) / 3.2 * 1vmin);
+  z-index: 99;
+  background: var(--red);
+  border: 1.5px solid black;
+  top: 19%;
+  left: 48.5%;
+  transform: rotate(90deg);
+}
+
+.red-bar-hz-five {
+  width: calc(var(--box-two-width) / 24 * 1vmin);
+  height: calc(var(--box-two-height) / 3.2 * 1vmin);
+  z-index: 99;
+  background: var(--red);
+  border: 1.5px solid black;
+  top: 7.8%;
+  left: 48.5%;
+  transform: rotate(90deg);
+}
+
+.floor-square-line {
+  height: calc(var(--floor-box-height) / 6 * 1vmin);
+  width: calc(var(--floor-box-width) / 2.5 * 1vmin);
+  background: #000;
+  top: 106%;
+  left: 86%;
+  border-radius: 2px;
+  border-right: 0;
+  z-index: 1000;
+}
+
+.floor-square-line-two {
+  height: calc(var(--floor-box-height) / 6 * 1vmin);
+  width: calc(var(--floor-box-width) / 12 * 1vmin);
+  background: #000;
+  top: 106%;
+  left: 54%;
+  border-radius: 2px;
+  z-index: 1000;
+}
+
+.side-line {
+  height: calc(var(--floor-box-height) / 8 * 1vmin);
+  width: calc(var(--floor-box-width) / 2 * 1vmin);
+  background: #DDD;
+  opacity: 0.5;
+  top: 27%;
+  left: -27.79%;
+  z-index: 1000;
+  border-radius: 5px;
+  transform: rotate(90deg);
+}
+
+.side-line-two {
+  height: calc(var(--floor-box-height) / 8 * 1vmin);
+  width: calc(var(--floor-box-width) / 1.75 * 1vmin);
+  background: #DDD;
+  opacity: 0.5;
+  top: 70%;
+  left: -32%;
+  z-index: 1000;
+  border-radius: 1px;
+  transform: rotate(90deg);
+}
+
+.side-line-three {
+  height: calc(var(--floor-box-height) / 8 * 1vmin);
+  width: calc(var(--floor-box-width) / 22 * 1vmin);
+  background: #000;
+  opacity: 1;
+  border-radius: 30px;
+  top: 47.5%;
+  left: 0%;
+  z-index: 1000;
+  transform: rotate(90deg);
+}
+
+@media screen and (max-width: 500px) {
+  .telephone-text {
+    font-size: 0.85em;
+  }
+  .phone-cable {
+    width: calc(var(--phone-cable-width) / 1.35 * 1vmin); 
+    height: calc(var(--phone-cable-height) * 1vmin);
+    border: 1.5px solid gray;
+    border-color: gray transparent transparent transparent;
+    border-radius: 60% / 10px 10px 0 0;
+    z-index: 99;
+    top: 48%;
+    left: 16.9%;
+    transform: rotate(90deg);
+    box-shadow: 0px 0px 0px 1.5px #000;
+  }
+  .red-bar,
+  .red-bar-two {
+    border: 0.9px solid #000;
+  }
+  .red-bar-hz,
+  .red-bar-hz-two,
+  .red-bar-hz-three,
+  .red-bar-hz-four,
+  .red-bar-hz-five {
+    border: 0.9px solid #000;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .telephone-text {
+    font-size: 0.75em;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .red-bar,
+  .red-bar-two {
+    border: 1.5px solid #000;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .red-bar,
+  .red-bar-two {
+    border: 1px solid #000;
+  }
+  .red-bar-hz,
+  .red-bar-hz-two,
+  .red-bar-hz-three,
+  .red-bar-hz-four,
+  .red-bar-hz-five {
+    border: 1px solid #000;
+  }
+  .phone-cable {
+    width: calc(var(--phone-cable-width) / 1.35 * 1vmin); 
+    height: calc(var(--phone-cable-height) * 1vmin);
+    border: 1.5px solid gray;
+    border-color: gray transparent transparent transparent;
+    border-radius: 60% / 10px 10px 0 0;
+    z-index: 99;
+    top: 48%;
+    left: 16.9%;
+    transform: rotate(90deg);
+    box-shadow: 0px 0px 0px 1.5px #000;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .telephone-text {
+    font-size: 0.55em;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .telephone-text {
+    font-size: 0.8em;
+  }
+  .red-bar,
+  .red-bar-two {
+    border: 0.9px solid #000;
+  }
+  .red-bar-hz,
+  .red-bar-hz-two,
+  .red-bar-hz-three,
+  .red-bar-hz-four,
+  .red-bar-hz-five {
+    border: 0.9px solid #000;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .telephone-text {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-height: 350px) {
+  .telephone-text {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-height: 250px) {
+  .telephone-text {
+    font-size: 0.3em;
+  }
+}
